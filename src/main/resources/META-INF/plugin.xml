@@ -5,6 +5,7 @@
     <vendor>sashi0034</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.redhat.devtools.lsp4ij</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
@@ -12,7 +13,23 @@
         <toolWindow factoryClass="com.github.sashi0034.angelintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
+    <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
+        <server id="angelScriptLanguageServer"
+                name="AngelScript Language Server"
+                factoryClass="com.github.sashi0034.angelintellij.lsp.AngelScriptLanguageServerFactory">
+            <description><![CDATA[
+            AngelScript Language Server (Preview)
+            ]]>
+            </description>
+        </server>
+
+        <fileNamePatternMapping patterns="*.as;as.predefined"
+                                serverId="angelScriptLanguageServer"
+                                languageId="angelscript"/>
+    </extensions>
+
     <applicationListeners>
-        <listener class="com.github.sashi0034.angelintellij.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.sashi0034.angelintellij.listeners.MyApplicationActivationListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
