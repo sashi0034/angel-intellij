@@ -11,6 +11,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.sashi0034.angelintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
+        <postStartupActivity implementation="com.github.sashi0034.angelintellij.ValidationStartupActivity"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
