@@ -31,7 +31,7 @@ class NodeChecker {
     public static void checkNodeInstallation() {
         try {
             // Execute "node -v" to get the Node.js version
-            ProcessBuilder pb = new ProcessBuilder("noded", "-v");
+            ProcessBuilder pb = new ProcessBuilder("node", "-v");
             Process process = pb.start();
             int exitCode = process.waitFor();
             if (exitCode != 0) {
