@@ -39,6 +39,10 @@
             </description>
         </server>
 
+        <semanticTokensColorsProvider
+                serverId="angelScriptLanguageServer"
+                class="com.github.sashi0034.angelintellij.lsp.AngelScriptSemanticTokensColorProvider"/>
+
         <fileNamePatternMapping patterns="*.as;as.predefined"
                                 serverId="angelScriptLanguageServer"
                                 languageId="angelscript"/>
