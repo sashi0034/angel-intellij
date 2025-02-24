@@ -25,6 +25,8 @@ This is a port of the version distributed with VSCode to IntelliJ.
 
 Please read the original documentation for details: https://github.com/sashi0034/angel-lsp
 
+**This plugin uses Node.js, so it must be installed.**
+
 Note: This plugin is still in preview and under development.
 <!-- Plugin description end -->
 
