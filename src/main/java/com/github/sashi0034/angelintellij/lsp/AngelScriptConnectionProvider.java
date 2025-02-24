@@ -22,7 +22,7 @@ public class AngelScriptConnectionProvider extends OSProcessStreamConnectionProv
             // Create a temporary file for the js/server-bundle.js
             File tempJsFile = File.createTempFile("as-server-bundle", ".js");
             try (FileOutputStream fos = new FileOutputStream(tempJsFile)) {
-                IOUtils.copy(input, fos);
+                input.transferTo(fos); // IOUtils.copy(input, fos);
             } catch (IOException e) {
                 throw new IllegalStateException("Can't create a temporary file for js/server-bundle.js", e);
             }
