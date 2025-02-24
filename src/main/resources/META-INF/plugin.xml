@@ -18,8 +18,15 @@
                 name="AngelScript"
                 implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptFileType"
                 fieldName="INSTANCE"
-                language="AngelScript"
+                language="angelscript"
                 extensions="as"/>
+
+        <fileType
+                name="AngelScript Predefined"
+                implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptPredefinedFileType"
+                fieldName="INSTANCE"
+                language="angelscript-predefined"
+                extensions="predefined"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
