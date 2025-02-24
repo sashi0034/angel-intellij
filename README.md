@@ -17,11 +17,15 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+This plugin provides AngelScript language support for IntelliJ via [lsp4ij](https://github.com/redhat-developer/lsp4ij).
+     
+It utilizes the AngelScript Language Server to offer features such as code completion, go-to definition, and more.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+This is a port of the version distributed with VSCode to IntelliJ. 
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+Please read the original documentation for details: https://github.com/sashi0034/angel-lsp
+
+Note: This plugin is still in preview and under development.
 <!-- Plugin description end -->
 
 ## Installation

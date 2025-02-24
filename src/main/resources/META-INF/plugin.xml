@@ -2,15 +2,15 @@
 <idea-plugin>
     <id>com.github.sashi0034.angelintellij</id>
     <name>AngelScript Language Server</name>
-    <vendor>sashi0034</vendor>
+    <vendor url="https://github.com/sashi0034">sashi0034</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.redhat.devtools.lsp4ij</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <!--FIXME    <resource-bundle>messages.MyBundle</resource-bundle>-->
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.sashi0034.angelintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <!--FIXME        <toolWindow factoryClass="com.github.sashi0034.angelintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>-->
 
         <postStartupActivity implementation="com.github.sashi0034.angelintellij.ValidationStartupActivity"/>
 
@@ -49,7 +49,7 @@
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.sashi0034.angelintellij.listeners.MyApplicationActivationListener"
-                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <!--FIXME        <listener class="com.github.sashi0034.angelintellij.listeners.MyApplicationActivationListener"-->
+        <!--FIXME                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>-->
     </applicationListeners>
 </idea-plugin>
