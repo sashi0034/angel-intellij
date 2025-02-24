@@ -13,6 +13,13 @@
         <toolWindow factoryClass="com.github.sashi0034.angelintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
 
         <postStartupActivity implementation="com.github.sashi0034.angelintellij.ValidationStartupActivity"/>
+
+        <fileType
+                name="AngelScript"
+                implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptFileType"
+                fieldName="INSTANCE"
+                language="AngelScript"
+                extensions="as"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
