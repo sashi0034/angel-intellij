@@ -2,6 +2,8 @@
 
 # angel-intellij Changelog
 
-## [0.1.0] - 2025/02/24
-### Initial release
-- Preview version is now available.
+## [Unreleased]
+
+## [0.1.0] 2025/02/24
+
+- Initial pre-release
