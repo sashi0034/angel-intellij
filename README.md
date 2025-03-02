@@ -1,4 +1,4 @@
-# angel-intellij
+# AngelScript Language Server for IntelliJ
 
 ![Build](https://github.com/sashi0034/angel-intellij/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
