@@ -1,8 +1,8 @@
 # AngelScript Language Server for IntelliJ
 
 ![Build](https://github.com/sashi0034/angel-intellij/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/26645-angelscript-language-server.svg)](https://plugins.jetbrains.com/plugin/26645-angelscript-language-server)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/26645-angelscript-language-server.svg)](https://plugins.jetbrains.com/plugin/26645-angelscript-language-server)
 
 [//]: # (## Template ToDo list)
 
