@@ -25,6 +25,7 @@ private script_item_ ::=
       | STRING
       | COMMENT
       | ';'
+      | UNKNOWN
 
 marks ::=
         PLUS

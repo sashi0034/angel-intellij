@@ -98,4 +98,4 @@ STRING = {DQ_STRING}|{SQ_STRING}|{TRIPLE_QUOTE_STRING}
 <YYINITIAL> {IDENTIFIER} { return AngelScriptTokenTypes.IDENTIFIER; }
 <YYINITIAL> {NUMBER} { return AngelScriptTokenTypes.NUMBER; }
 <YYINITIAL> {STRING} { return AngelScriptTokenTypes.STRING; }
-<YYINITIAL> . { return TokenType.BAD_CHARACTER; }
+<YYINITIAL> . { return AngelScriptTokenTypes.UNKNOWN; }

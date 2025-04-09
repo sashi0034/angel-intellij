@@ -705,7 +705,7 @@ class AngelScriptLexer implements FlexLexer {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1:
-            { return TokenType.BAD_CHARACTER;
+            { return AngelScriptTokenTypes.UNKNOWN;
             }
           // fall through
           case 60: break;
