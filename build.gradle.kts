@@ -56,7 +56,7 @@ dependencies {
         zipSigner()
         testFramework(TestFrameworkType.Platform)
 
-        plugin("com.redhat.devtools.lsp4ij:0.10.0")
+        plugin("com.redhat.devtools.lsp4ij:0.12.0")
     }
 }
 
