@@ -9,9 +9,9 @@ import com.intellij.psi.tree.IElementType;
 public class AngelScriptBraceMatcher implements PairedBraceMatcher {
 
     private static final BracePair[] PAIRS = new BracePair[]{
-            new BracePair(AngelScriptTokenTypes.LPAREN, AngelScriptTokenTypes.RPAREN, false),
-            new BracePair(AngelScriptTokenTypes.LBRACE, AngelScriptTokenTypes.RBRACE, true),
-            new BracePair(AngelScriptTokenTypes.LBRACKET, AngelScriptTokenTypes.RBRACKET, false)
+            new BracePair(AngelScriptTokenTypes.OPEN_PARENTHESIS, AngelScriptTokenTypes.CLOSE_PARENTHESIS, false),
+            new BracePair(AngelScriptTokenTypes.START_STATEMENT_BLOCK, AngelScriptTokenTypes.END_STATEMENT_BLOCK, true),
+            new BracePair(AngelScriptTokenTypes.OPEN_BRACKET, AngelScriptTokenTypes.CLOSE_BRACKET, false)
     };
 
     @Override

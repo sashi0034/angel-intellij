@@ -1,8 +1,7 @@
 package com.github.sashi0034.angelintellij.language;
 
+import com.github.sashi0034.angelintellij.parser.AngelScriptParser;
 import com.github.sashi0034.angelintellij.psi.AngelScriptFile;
-import com.github.sashi0034.angelintellij.psi.AngelScriptPsiLeafNode;
-import com.github.sashi0034.angelintellij.psi.AngelScriptTokenTypes;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiParser;
@@ -14,6 +13,7 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
+import com.github.sashi0034.angelintellij.psi.AngelScriptTokenTypes;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -23,10 +23,9 @@ public class AngelScriptParserDefinition implements ParserDefinition {
 
     private static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
 
-    private static final TokenSet COMMENTS = TokenSet.create(AngelScriptTokenTypes.LINE_COMMENT,
-            AngelScriptTokenTypes.DOC_COMMENT_START,
-            AngelScriptTokenTypes.BLOCK_COMMENT_START,
-            AngelScriptTokenTypes.BLOCK_COMMENT_END);
+    private static final TokenSet COMMENTS = TokenSet.create(AngelScriptTokenTypes.COMMENT);
+
+    private static final TokenSet STRINGS = TokenSet.create(AngelScriptTokenTypes.STRING);
 
     @Override
     public @NotNull Lexer createLexer(Project project) {
@@ -35,10 +34,7 @@ public class AngelScriptParserDefinition implements ParserDefinition {
 
     @Override
     public PsiParser createParser(Project project) {
-        return (root, builder) -> {
-            builder.mark().done(root);
-            return builder.getTreeBuilt();
-        };
+        return new AngelScriptParser();
     }
 
     @Override
@@ -58,12 +54,12 @@ public class AngelScriptParserDefinition implements ParserDefinition {
 
     @Override
     public @NotNull TokenSet getStringLiteralElements() {
-        return null;
+        return STRINGS;
     }
 
     @Override
     public @NotNull PsiElement createElement(ASTNode node) {
-        return new AngelScriptPsiLeafNode(node);
+        return AngelScriptTokenTypes.Factory.createElement(node);
     }
 
     @Override

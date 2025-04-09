@@ -7,6 +7,10 @@ import com.intellij.psi.PsiElement;
 
 public class AngelScriptVisitor extends PsiElementVisitor {
 
+  public void visitMarks(@NotNull AngelScriptMarks o) {
+    visitPsiElement(o);
+  }
+
   public void visitPsiElement(@NotNull PsiElement o) {
     visitElement(o);
   }
