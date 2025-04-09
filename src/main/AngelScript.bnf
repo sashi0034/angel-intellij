@@ -1,0 +1,81 @@
+{
+  // ---------- Grammar‑Kit settings ----------
+  parserClass = "com.github.sashi0034.angelintellij.parser.AngelScriptParser"
+  extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix = "AngelScript"
+  psiImplClassSuffix = "Impl"
+  psiPackage = "com.github.sashi0034.angelintellij.psi"
+  psiImplPackage = "com.github.sashi0034.angelintellij.psi.impl"
+
+  elementTypeHolderClass = "com.github.sashi0034.angelintellij.psi.AngelScriptTokenTypes"
+  elementTypeClass = "com.github.sashi0034.angelintellij.psi.AngelScriptElementType"
+  tokenTypeClass = "com.github.sashi0034.angelintellij.psi.AngelScriptTokenType"
+}
+
+// ──────────────── entry point ────────────────
+script ::= script_item_*
+
+// ──────────────── top‑level items ─────────────
+private script_item_ ::=
+        marks
+      | KEYWORD
+      | IDENTIFIER
+      | NUMBER
+      | STRING
+      | COMMENT
+      | ';'
+
+marks ::=
+        PLUS
+      | ADD_ASSIGN
+      | INC
+      | MINUS
+      | SUB_ASSIGN
+      | DEC
+      | STAR
+      | MUL_ASSIGN
+      | SLASH
+      | DIV_ASSIGN
+      | PERCENT
+      | MOD_ASSIGN
+      | STAR_STAR
+      | POW_ASSIGN
+      | ASSIGNMENT
+      | EQUAL
+      | DOT
+      | VARIADIC
+      | BIT_OR
+      | OR_ASSIGN
+      | OR
+      | AMP
+      | AND_ASSIGN
+      | AND
+      | BIT_XOR
+      | XOR_ASSIGN
+      | XOR
+      | LESS_THAN
+      | LESS_THAN_OR_EQUAL
+      | BIT_SHIFT_LEFT
+      | SHIFT_LEFT_ASSIGN
+      | GREATER_THAN
+      | GREATER_THAN_OR_EQUAL
+      | BIT_SHIFT_RIGHT
+      | SHIFT_RIGHT_L_ASSIGN
+      | BIT_SHIFT_RIGHT_ARITH
+      | SHIFT_RIGHT_A_ASSIGN
+      | BIT_NOT
+      | END_STATEMENT
+      | LIST_SEPARATOR
+      | START_STATEMENT_BLOCK
+      | END_STATEMENT_BLOCK
+      | OPEN_PARENTHESIS
+      | CLOSE_PARENTHESIS
+      | OPEN_BRACKET
+      | CLOSE_BRACKET
+      | QUESTION
+      | COLON
+      | SCOPE
+      | NOT
+      | NOT_EQUAL
+      | NOT_IS

@@ -27,6 +27,18 @@
                 fieldName="INSTANCE"
                 language="angelscript-predefined"
                 extensions="predefined"/>
+
+        <lang.braceMatcher language="angelscript"
+                           implementationClass="com.github.sashi0034.angelintellij.editor.AngelScriptBraceMatcher"/>
+
+        <lang.parserDefinition language="angelscript"
+                               implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptParserDefinition"/>
+
+        <lang.syntaxHighlighterFactory language="angelscript"
+                                       implementationClass="com.github.sashi0034.angelintellij.editor.AngelScriptSyntaxHighlighterFactory"/>
+
+        <!--        <lang.quoteHandler language="AngelScript"-->
+        <!--                           implementationClass="com.github.sashi0034.angelintellij.editor.AngelScriptQuoteHandler"/>-->
     </extensions>
 
     <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
