@@ -1,6 +1,5 @@
 package com.github.sashi0034.angelintellij.language;
 
-import com.github.sashi0034.angelintellij.lexer.AngelScriptLexerAdapter;
 import com.github.sashi0034.angelintellij.psi.AngelScriptFile;
 import com.github.sashi0034.angelintellij.psi.AngelScriptPsiLeafNode;
 import com.github.sashi0034.angelintellij.psi.AngelScriptTokenTypes;

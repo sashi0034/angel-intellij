@@ -31,10 +31,8 @@
         <lang.braceMatcher language="angelscript"
                            implementationClass="com.github.sashi0034.angelintellij.editor.AngelScriptBraceMatcher"/>
 
-        <extensions defaultExtensionNs="com.intellij">
-            <lang.parserDefinition language="angelscript"
-                                   implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptParserDefinition"/>
-        </extensions>
+        <lang.parserDefinition language="angelscript"
+                               implementationClass="com.github.sashi0034.angelintellij.language.AngelScriptParserDefinition"/>
 
         <!--        <lang.quoteHandler language="AngelScript"-->
         <!--                           implementationClass="com.github.sashi0034.angelintellij.editor.AngelScriptQuoteHandler"/>-->

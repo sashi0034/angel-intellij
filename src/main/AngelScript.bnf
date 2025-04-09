@@ -1,0 +1,27 @@
+{
+  // ---------- Grammar‑Kit settings ----------
+  parserClass = "com.github.sashi0034.angelintellij.parser.AngelScriptParser"
+  extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix = "AngelScript"
+  psiImplClassSuffix = "Impl"
+  psiPackage = "com.github.sashi0034.angelintellij.psi"
+  psiImplPackage = "com.github.sashi0034.angelintellij.psi.impl"
+
+  elementTypeHolderClass = "com.github.sashi0034.angelintellij.psi.AngelScriptTypes"
+  elementTypeClass = "com.github.sashi0034.angelintellij.psi.AngelScriptTokenType"
+  tokenTypeClass = "com.github.sashi0034.angelintellij.psi.AngelScriptTokenType"
+}
+
+// ──────────────── entry point ────────────────
+script ::= script_item_*                      { pin=1 }
+
+// ──────────────── top‑level items ─────────────
+private script_item_ ::=
+        MARK
+      | KEYWORD
+      | IDENTIFIER
+      | NUMBER
+      | STRING
+      | COMMENT
+      | ';'
