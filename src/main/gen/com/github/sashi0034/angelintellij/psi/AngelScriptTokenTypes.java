@@ -64,6 +64,7 @@ public interface AngelScriptTokenTypes {
   IElementType STAR_STAR = new AngelScriptTokenType("STAR_STAR");
   IElementType STRING = new AngelScriptTokenType("STRING");
   IElementType SUB_ASSIGN = new AngelScriptTokenType("SUB_ASSIGN");
+  IElementType UNKNOWN = new AngelScriptTokenType("UNKNOWN");
   IElementType VARIADIC = new AngelScriptTokenType("VARIADIC");
   IElementType XOR = new AngelScriptTokenType("XOR");
   IElementType XOR_ASSIGN = new AngelScriptTokenType("XOR_ASSIGN");

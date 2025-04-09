@@ -16,6 +16,6 @@ public class AngelScriptSyntaxHighlighter implements SyntaxHighlighter {
 
     @Override
     public @NotNull TextAttributesKey[] getTokenHighlights(IElementType type) {
-        return TextAttributesKey.EMPTY_ARRAY;
+        return TextAttributesKey.EMPTY_ARRAY; // TODO
     }
 }

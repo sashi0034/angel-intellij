@@ -168,6 +168,7 @@ public class AngelScriptParser implements PsiParser, LightPsiParser {
   //       | STRING
   //       | COMMENT
   //       | ';'
+  //       | UNKNOWN
   static boolean script_item_(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "script_item_")) return false;
     boolean r;
@@ -178,6 +179,7 @@ public class AngelScriptParser implements PsiParser, LightPsiParser {
     if (!r) r = consumeToken(b, STRING);
     if (!r) r = consumeToken(b, COMMENT);
     if (!r) r = consumeToken(b, ";");
+    if (!r) r = consumeToken(b, UNKNOWN);
     return r;
   }
 

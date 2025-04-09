@@ -1,0 +1,3 @@
+[submodule "angel-lsp"]
+	path = angel-lsp
+	url = https://github.com/sashi0034/angel-lsp
