@@ -60,6 +60,12 @@
                                 languageId="angelscript"/>
     </extensions>
 
+    <actions>
+        <!-- Reuse VS Code action ids while waiting for standardization of LSP commands https://github.com/microsoft/language-server-protocol/issues/788 -->
+        <action id="editor.action.triggerParameterHints"
+                class="com.github.sashi0034.angelintellij.lsp.action.TriggerParameterHintsAction"/>
+    </actions>
+
     <applicationListeners>
         <!--FIXME        <listener class="com.github.sashi0034.angelintellij.listeners.MyApplicationActivationListener"-->
         <!--FIXME                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>-->
