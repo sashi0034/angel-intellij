@@ -7,7 +7,9 @@ import org.jetbrains.annotations.NotNull;
 
 public class TriggerParameterHintsAction extends LSPCommandAction {
     @Override
-    protected void commandPerformed(@NotNull LSPCommand lspCommand, @NotNull AnActionEvent anActionEvent) {
+    protected void commandPerformed(@NotNull LSPCommand lspCommand, @NotNull AnActionEvent event) {
         System.out.println(lspCommand);
+
+        // TODO
     }
 }

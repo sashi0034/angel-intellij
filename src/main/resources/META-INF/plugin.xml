@@ -62,8 +62,12 @@
 
     <actions>
         <!-- Reuse VS Code action ids while waiting for standardization of LSP commands https://github.com/microsoft/language-server-protocol/issues/788 -->
-        <action id="editor.action.triggerParameterHints"
-                class="com.github.sashi0034.angelintellij.lsp.action.TriggerParameterHintsAction"/>
+<!--        <action id="editor.action.triggerParameterHints"-->
+<!--                class="com.github.sashi0034.angelintellij.lsp.action.TriggerParameterHintsAction"/>-->
+
+<!--        <action id="editor.action.triggerSuggest"-->
+<!--                class="com.github.sashi0034.angelintellij.lsp.action.TriggerSuggestAction"/>-->
+
     </actions>
 
     <applicationListeners>
