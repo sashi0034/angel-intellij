@@ -5,25 +5,22 @@ import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
-import com.intellij.openapi.startup.StartupActivity;
+import com.intellij.openapi.startup.ProjectActivity;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 
-public class ValidationStartupActivity implements StartupActivity {
+public class ValidationStartupActivity implements ProjectActivity {
+    public static final String GROUP_ID = "angelintellij";
+
     @Override
-    public void runActivity(@NotNull Project project) {
-//        System.out.println("AngelScript IntelliJ Plugin has been activated");
-//
-//        Messages.showInfoMessage("AngelScript IntelliJ Plugin has been activated", "AngelScript IntelliJ Plugin");
-
-//        ToastNotifier.show(
-//                "AngelScript IntelliJ Plugin",
-//                "AngelScript IntelliJ Plugin has been activated",
-//                NotificationType.INFORMATION);
-
+    public @Nullable Object execute(@NotNull Project project, @NotNull Continuation<? super Unit> continuation) {
         // Check for the existence of Node.js when the project starts
         NodeChecker.checkNodeInstallation();
+        return null;
     }
 }
 
@@ -58,7 +55,7 @@ class ToastNotifier {
 
         // Create a notification
         Notification notification = new Notification(
-                "angel-intellij", // Notification group ID
+                ValidationStartupActivity.GROUP_ID, // Notification group ID
                 title,
                 content,
                 type
