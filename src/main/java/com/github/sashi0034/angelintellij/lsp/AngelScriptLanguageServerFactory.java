@@ -4,7 +4,9 @@ import com.intellij.openapi.project.Project;
 import com.redhat.devtools.lsp4ij.LanguageServerFactory;
 import com.redhat.devtools.lsp4ij.client.LanguageClientImpl;
 import com.redhat.devtools.lsp4ij.server.StreamConnectionProvider;
+import com.redhat.devtools.lsp4ij.settings.contributors.LanguageServerSettingsContributor;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class AngelScriptLanguageServerFactory implements LanguageServerFactory {
     @Override
@@ -17,9 +19,9 @@ public class AngelScriptLanguageServerFactory implements LanguageServerFactory {
         return new AngelScriptLanguageClient(project);
     }
 
-//    @Override // If you need to expose a custom server API
-//    public @NotNull Class<? extends LanguageServer> getServerInterface() {
-//        return AngelScriptCustomServer.class;
-//    }
+    @Override
+    public @Nullable LanguageServerSettingsContributor createLanguageServerSettingsContributor() {
+        return new AngelScriptLanguageServerSettingsContributor();
+    }
 }
 

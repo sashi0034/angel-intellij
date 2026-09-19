@@ -19,6 +19,12 @@ kotlin {
     jvmToolchain(17)
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 // Configure project's dependencies
 repositories {
     mavenCentral()
@@ -56,7 +62,7 @@ dependencies {
         zipSigner()
         testFramework(TestFrameworkType.Platform)
 
-        plugin("com.redhat.devtools.lsp4ij:0.12.0")
+        plugin("com.redhat.devtools.lsp4ij:0.21.0")
     }
 }
 

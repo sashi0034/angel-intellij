@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-19
+
+- expose language server settings
+
 ## [0.1.1] - 2025-04-09
 
 - Update LSP version
